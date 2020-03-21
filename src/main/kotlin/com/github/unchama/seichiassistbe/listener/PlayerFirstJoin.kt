@@ -20,7 +20,6 @@ object PlayerFirstJoin : Listener {
                 }
             }
         }
-        val pos = e.respawnPosition
-        e.respawnPosition = Position(pos.x, 65.0, pos.z, pos.level)
+        // リスポーンをいじる必要はない
     }
 }
