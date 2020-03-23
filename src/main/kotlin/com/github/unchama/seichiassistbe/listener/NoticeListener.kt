@@ -10,7 +10,10 @@ object NoticeListener : Listener {
 
     @EventHandler
     fun onJoin(event: PlayerJoinEvent) {
-        event.player.sendMessage("${TextFormat.RED}このサーバは現在デバッグ鯖として動いています, 急な仕様変更やデータ削除の可能性があります")
+        event.player.apply {
+            sendMessage("${TextFormat.RED}このサーバは現在デバッグ鯖として動いています, 急な仕様変更やデータ削除の可能性があります")
+            sendMessage("[${TextFormat.YELLOW}TIPS]${TextFormat.RESET}地形が表示されない場合は再接続すると改善する場合があります")
+        }
     }
-
+    
 }
