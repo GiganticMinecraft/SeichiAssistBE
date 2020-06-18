@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    implementation("cn.nukkit:nukkit:1.0-SNAPSHOT")
+    implementation("cn.nukkit:nukkit:2.0.0-SNAPSHOT")
     compile(kotlin("stdlib-jdk8"))
 }
 
