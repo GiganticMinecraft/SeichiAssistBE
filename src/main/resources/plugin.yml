@@ -3,4 +3,4 @@ name: @name@
 main: com.github.unchama.seichiassistbe.SeichiAssistBE
 # Gradle側で勝手に置換されます
 version: @version@
-api: 1.0.9
+api: 2.0.0

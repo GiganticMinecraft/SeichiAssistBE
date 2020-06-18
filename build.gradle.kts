@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    implementation("cn.nukkit:nukkit:1.0-SNAPSHOT")
+    implementation(fileTree(mapOf("dir" to "libs", "include" to "*.jar")))
     compile(kotlin("stdlib-jdk8"))
 }
 
