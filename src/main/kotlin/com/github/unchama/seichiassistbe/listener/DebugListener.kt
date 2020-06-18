@@ -2,15 +2,16 @@ package com.github.unchama.seichiassistbe.listener
 
 import cn.nukkit.event.EventHandler
 import cn.nukkit.event.Listener
-import cn.nukkit.event.player.PlayerFormRespondedEvent
 import cn.nukkit.event.player.PlayerInteractEvent
-import cn.nukkit.form.element.ElementButton
-import cn.nukkit.item.Item
-import com.github.unchama.seichiassistbe.util.WindowWithCallback
+import cn.nukkit.utils.Identifier
+import com.github.unchama.seichiassistbe.stickmenu.MainPage
+
+//import com.github.unchama.seichiassistbe.util.WindowWithCallback
 
 @Suppress("unused")
 object DebugListener : Listener {
 
+    /*
     @EventHandler
     fun `show a form with buttons on clicking a stick`(event: PlayerInteractEvent) {
         val player = event.player ?: return
@@ -29,5 +30,15 @@ object DebugListener : Listener {
                 )
         )
     }
+     */
 
+    @EventHandler
+    fun test(event: PlayerInteractEvent) {
+        val player = event.player ?: return
+
+        if (event.action != PlayerInteractEvent.Action.RIGHT_CLICK_AIR
+                || event.item?.id != Identifier.fromString("STICK")) return
+
+        MainPage.showForm(player)
+    }
 }
